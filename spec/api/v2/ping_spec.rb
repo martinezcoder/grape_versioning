@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe V2::Apidemo::Ping do
+describe V2::Ping do
   it "ping" do
     get "api/v2/ping"
     response.body.should == { :ping => "pong" }.to_json
@@ -11,7 +11,7 @@ describe V2::Apidemo::Ping do
   end
 end
 
-describe V2::Apidemo::ApiUser do
+describe V2::UserApi do
   it "respond with all users" do
     get "api/v2/users"
     response.body.should == User.all.to_json

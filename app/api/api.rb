@@ -5,7 +5,7 @@ class API < Grape::API
   end
   version 'v2' do
     format 'json'
-    mount V2::Apidemo::Ping
-    mount V2::Apidemo::ApiUser
+    mount V2::Ping
+    mount V2::UserApi
   end
 end
